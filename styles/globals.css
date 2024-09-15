@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-sora ;
+}
+
+.custom-screen {
+    @apply leading-loose tracking-wide text-sm mx-auto md:px-8;
+}
+
+.gradient-border {
+    border: 1px solid transparent;
+    background: linear-gradient(white, white), linear-gradient(25deg, rgba(209, 213, 219, 1), rgba(209, 213, 219, 1), rgba(0, 0, 0, 0.63), rgba(209, 213, 219, 1), rgba(209, 213, 219, 1));
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+@layer base {
+    
+    .btn,
+    .input {
+      @apply h-[52px];
+    }
+    .input {
+      @apply w-full h-[52px] rounded-lg pl-6 ;
+    }
+    .input,
+    .textarea {
+      @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border   placeholder:font-light;
+    }
+    .textarea {
+      @apply w-full h-[180px] p-6  rounded-lg resize-none;
+    }
+  }
