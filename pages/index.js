@@ -62,7 +62,7 @@ export default function Home() {
       <Head>
         <meta name='robots' content='index' />
       </Head>
-      <div className="sm:flex items-center justify-center py-8 sm:px-20 px-6">
+      <div className="sm:flex items-center justify-between py-8  px-28">
         <Hero />
         <MasonryGrid/>
       </div>
@@ -81,10 +81,10 @@ export default function Home() {
       </GradientWrapper> */}
       {/* <FooterCTA /> */}
 
-      <div className='pt-28 pb-12 flex'>
-        <div className='custom-screen text-gray-600'>
-          <div className='max-w-lg mx-auto gap-12 justify-between lg:flex lg:max-w-none'>
-            <div className='max-w-lg sm:text-center lg:text-left'>
+      <div className='pt-28 pb-12 px-28 '>
+        <div className=' text-gray-600'>
+          <div className=' mx-auto gap-x-48 justify-center flex '>
+            <div className=' sm:text-center lg:text-left'>
               <h1 className='text-gray-800 text-3xl text-center mb-8 font-semibold sm:text-4xl'>
                 Skontaktuj się
               </h1>
@@ -93,7 +93,7 @@ export default function Home() {
         initial="hidden"
         animate="show"
         exit="hidden"
-        className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center justify-center bg-slate-500/20 xl:px-20 py-4 text-center"
+        className="flex flex-col md:flex-row lg:flex-row xl:flex-row items-center bg-slate-500/20 xl:px-20 py-4 "
       >
         <motion.div
           variants={fadeIn("up", 0.2)}

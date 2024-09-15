@@ -2,12 +2,12 @@ import NavLink from "../NavLink"
 
 const Hero = () => (
     <section>
-        <div className="custom-screen  sm:py-28 py-8 text-gray-600">
-            <div className="space-y-5 max-w-3xl mx-auto">
-                <h1 className=" text-gray-800 font-extrabold mx-auto sm:text-4xl sm:leading-[4rem]">
+        <div className=" sm:py-28 py-8 text-gray-600">
+            <div className="space-y-5 max-w-3xl tracking-wide">
+                <h1 className=" text-gray-800 sm:text-4xl sm:leading-tight">
                     Profesjonalne rozwiązania <br/> w zakresie <span className="text-accent">ochrony przeciwpożarowej</span>
                 </h1>
-                <p className="max-w-xl text-lg">
+                <p className="max-w-xl text-lg leading-relaxed ">
                     Usługi przeciwpożarowe - sporządzanie dokumentacji ppoż. tak, aby Twój obiekt spełniał wymagane przepisy i zapewniał bezpieczeństwo jego użytkownikom.
                 </p>
                 <div className="flex items-center gap-x-3 font-medium text-sm">

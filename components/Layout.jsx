@@ -11,7 +11,7 @@ const sora = Sora({
 
 const Layout = ({ children }) => {
     return (
-        <div className={`   ${sora.variable} font-sora `}>
+        <div className={`   ${sora.variable} font-sora`}>
             <Head>
                 <title>Fire Protection Solutions</title>
                 <meta name='description' content='Usługi ppoż. w województwie wielkopolskim. Instrukcje bezpieczeństwa pożarowego IBP, operaty przeciwpożarowe, operaty ppoż., audyty ppoż. budynków' />

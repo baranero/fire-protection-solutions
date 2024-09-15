@@ -30,7 +30,7 @@ const Navbar = () => {
     }
 
     return (
-        <header className='font-sora px-20 '>
+        <header className='font-sora px-28 '>
             <nav className={` w-full md:static md:text-sm ${state ? "fixed z-10 h-full" : ""}`}>
                 <div className="custom-screen items-center mx-auto md:flex">
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -53,12 +53,12 @@ const Navbar = () => {
                             </button>
                         </div>
                     </div>
-                    <div className={`flex-1 pb-3 mt-8 md:pb-0 md:mt-0 md:block ${state ? "" : "hidden"}`}>
-                        <ul className="text-gray-700 justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0 md:text-gray-600 md:font-medium">
+                    <div className={`flex-1 pb-3 mt-8 md:pb-0 md:mt-0 tracking-wide md:block ${state ? "" : "hidden"}`}>
+                        <ul className=" justify-end items-center space-y-6 md:flex md:space-x-6 md:space-y-0  md:font-medium">
                             {
                                 navigation.map((item, idx) => {
                                     return (
-                                        <li key={idx} className="duration-150 hover:text-gray-900">
+                                        <li key={idx} className="duration-150 hover:text-gray-400">
                                             <Link
                                                 href={item.path}
                                                 className="block"
