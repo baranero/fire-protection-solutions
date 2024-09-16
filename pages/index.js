@@ -25,6 +25,7 @@ export default function Home() {
     "SEO",
   ];
 
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
