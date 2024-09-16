@@ -18,8 +18,8 @@ const currentYear = new Date().getFullYear();
 const Footer = () => (
     <footer>
         <div className="custom-screen pt-16">
-            <div className="mt-10 py-10 border-t items-center justify-between sm:flex">
-                <p className="text-gray-600">© {currentYear} Fire Protection Solutions Jakub Baran</p>
+            <div className="mt-10 py-10 border-t items-center justify-center sm:justify-between sm:flex [x-6] sm:px-28">
+                <p className="text-gray-600 text-center">© {currentYear} Fire Protection Solutions Jakub Baran</p>
                 {/* <div className="flex items-center gap-x-6 text-gray-400 mt-6">
                     {
                         socialInfo.map((item, idx) => (

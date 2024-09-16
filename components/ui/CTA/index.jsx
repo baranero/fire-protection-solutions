@@ -5,15 +5,16 @@ import Image from "next/image"
 
 const CTA = () => {
     return (
-        <SectionWrapper id="o-mnie" className="pb-0 px-28">
+        <SectionWrapper id="o-mnie" className="px-6 sm:px-28">
+                        <h2 className="text-center pt-6 pb-28 text-5xl text-accent">O mnie</h2>
             <div className="custom-screen text-sm">
                 <div className="items-center gap-x-12 lg:flex">
                     <div className="flex-1 sm:hidden lg:block">
                         <Image src={ctaImage} className="rounded-lg md:max-w-lg" alt="mgr inż. poż. Jakub Baran" />
                     </div>
-                    <div className="max-w-xl mt-6 md:mt-0 lg:max-w-2xl text-justify">
-                        <h2 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                            mgr inż. poż. Jakub Baran
+                    <div className="max-w-xl mt-6 md:mt-0 lg:max-w-2xl text-center sm:text-justify">
+                        <h2 className="text-gray-800 text-2xl  sm:text-3xl pb-8">
+                            mgr inż. poż. Jakub <span className="text-accent">Baran</span>
                         </h2>
                         <p className="mt-3  text-gray-600">
                         Z ochroną przeciwpożarową jestem związany od 2015 roku. W roku 2019 uzyskałem tytuł naukowy i zawodowy inżyniera pożarnictwa kończąc Szkołę Główną Służby Pożarniczej w Warszawie. Podnosząc swoje kwalifikacje w roku 2021 uzyskałem tytuł magistra inżyniera pożarnictwa.

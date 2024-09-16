@@ -62,7 +62,7 @@ export default function Home() {
       <Head>
         <meta name='robots' content='index' />
       </Head>
-      <div className="sm:flex items-center justify-between py-8  px-28">
+      <div className="sm:flex items-center sm:text-left text-center justify-between py-8 px-6 sm:px-28">
         <Hero />
         <MasonryGrid/>
       </div>
@@ -81,11 +81,12 @@ export default function Home() {
       </GradientWrapper> */}
       {/* <FooterCTA /> */}
 
-      <div className='pt-28 pb-12 px-28 '>
+      <div id="kontakt" className='pt-28 pb-12 sm:px-28 px-6 '>
+
         <div className=' text-gray-600'>
-          <div className=' mx-auto gap-x-48 justify-center flex '>
+          <div className=' mx-auto gap-x-48 sm:justify-center flex flex-col sm:flex-row'>
             <div className=' sm:text-center lg:text-left'>
-              <h1 className='text-gray-800 text-3xl text-center mb-8 font-semibold sm:text-4xl'>
+              <h1 className='text-gray-800 text-3xl text-center mb-12 font-semibold sm:text-4xl'>
                 Skontaktuj się
               </h1>
               <motion.div
@@ -102,7 +103,7 @@ export default function Home() {
           exit="hidden"
           className="p-4"
         >
-          <BsFillTelephoneFill className="mx-auto mb-4" size={40} />
+          <BsFillTelephoneFill className="mx-auto mb-4 text-accent" size={40} />
           <a href="tel:+4879078993">+48 790 782 993</a>
         </motion.div>
         <motion.div
@@ -112,7 +113,7 @@ export default function Home() {
           exit="hidden"
           className="p-4"
         >
-          <AiOutlineMail className="mx-auto mb-4" size={40} />
+          <AiOutlineMail className="mx-auto mb-4 text-accent" size={40} />
           <a href="mailto:biuro@fp-solutions.pl">biuro@fp-solutions.pl</a>
         </motion.div>
       </motion.div>
