@@ -48,8 +48,8 @@ const Features = () => {
     return (
         <SectionWrapper>
             <h2 className="text-center pt-6 pb-28 text-5xl text-accent">Oferta</h2>
-            <div id="uslugi" className="text-gray-600 text-sm sm:px-28 px-6 mx-auto">
-                <ul className="grid sm:gap-x-20 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 sm:pb-20 pb-8 max-w-max">
+            <div id="uslugi" className="text-gray-600 text-sm sm:px-28 px-6 justify-center">
+                <ul className="grid mx-auto sm:gap-x-20 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 sm:pb-20 pb-8 max-w-max">
                     {features.map((item, idx) => (
                         <li key={idx} className="space-y-3 bg-slate-100 p-8">
                             <div className="w-12 h-12 border mx-auto text-accent rounded-full flex items-center justify-center">
@@ -66,7 +66,7 @@ const Features = () => {
                         </li>
                     ))}
                 </ul>
-                <ul className="grid sm:gap-x-20 gap-y-8 sm:grid-cols-2 lg:grid-cols-2 max-w-max mx-auto">
+                <ul className="grid mx-auto sm:gap-x-20 gap-y-8 sm:grid-cols-2 lg:grid-cols-2 max-w-max mx-auto">
                     {nextFeatures.map((item, idx) => (
                         <li key={idx} className="space-y-3 bg-slate-100 p-8">
                             <div className="w-12 h-12 border mx-auto text-accent rounded-full flex items-center justify-center">

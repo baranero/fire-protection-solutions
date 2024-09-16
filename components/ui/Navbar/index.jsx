@@ -7,7 +7,8 @@ import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
     const [state, setState] = useState(false);
-    const [dropdownOpen, setDropdownOpen] = useState(false); // State for managing the dropdown visibility
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const { events } = useRouter();
 
     const navigation = [
@@ -18,7 +19,7 @@ const Navbar = () => {
             path: "/#uslugi",
             dropdown: [
                 { title: "Instrukcja Bezpieczeństwa Pożarowego", path: "/instrukcja-bezpieczenstwa-pozarowego" },
-                { title: "Operat przeciwpożarowe", path: "/operat-ppoz" },
+                { title: "Operat przeciwpożarowy", path: "/operat-ppoz" },
                 { title: "Audyt przeciwpożarowy", path: "/audyt-ppoz" },
                 { title: "Scenariusz rozwoju pożaru", path: "/scenariusz-rozwoju-pozaru" },
                 { title: "Ocena zagrożenia wybuchem", path: "/ocena-zagrozenia-wybuchem" },
@@ -27,21 +28,32 @@ const Navbar = () => {
     ];
 
     useEffect(() => {
-        // Close the navbar menu when navigating
         const handleState = () => {
             document.body.classList.remove("overflow-hidden");
             setState(false);
-            setDropdownOpen(false); // Close dropdown when navigating away
+            setDropdownOpen(false);
         };
         events.on("routeChangeStart", handleState);
         events.on("hashChangeStart", handleState);
 
-        // Clean up event listeners
         return () => {
             events.off("routeChangeStart", handleState);
             events.off("hashChangeStart", handleState);
         };
     }, [events]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     const handleNavMenu = () => {
         setState(!state);
@@ -54,38 +66,34 @@ const Navbar = () => {
 
     return (
         <header className='font-sora sm:px-28 px-6 pt-3'>
-            <nav className='w-full'>
-                <div className="items-center flex justify-between w-full">
+            <nav className='w-full items-center flex justify-between'>
+                <div className="w-full sm:items-center sm:flex sm:justify-between">
                     <div className="flex items-center justify-between py-3 md:py-5">
                         <Brand />
                         <div className="md:hidden">
                             <button role="button" aria-label="Open the menu" className="text-gray-500 hover:text-gray-800"
                                 onClick={handleNavMenu}
                             >
-                                {
-                                    state ? (
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                                        </svg>
-                                    ) : (
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-accent">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                                        </svg>
-                                    )
-                                }
+                                {state ? (
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-accent" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                                    </svg>
+                                ) : (
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-accent">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                )}
                             </button>
                         </div>
                     </div>
 
-                    {/* Overlay for darkening the background */}
                     {state && (
                         <div
                             className="fixed inset-0 bg-black bg-opacity-50 z-20"
-                            onClick={handleNavMenu} // Clicking the overlay will also close the menu
+                            onClick={handleNavMenu}
                         ></div>
                     )}
 
-                    {/* Mobile Menu */}
                     <div className={`fixed top-0 right-0 h-full w-3/4 bg-white shadow-lg z-30 transform ${state ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 ease-in-out md:relative md:translate-x-0 md:bg-transparent md:shadow-none md:pb-0 md:mt-0 md:w-auto`}>
                         <button className="absolute top-4 right-4 text-red-600 hover:text-red-700 md:hidden" onClick={handleNavMenu}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -96,10 +104,12 @@ const Navbar = () => {
                             {navigation.map((item, idx) => {
                                 if (item.dropdown) {
                                     return (
-                                        <li key={idx} className="relative group sm:p-3 md:p-0">
+                                        <li key={idx} className={`relative group sm:p-3 md:p-0 ${isMobile ? '' : 'hoverable'}`}>
                                             <button
-                                                onClick={toggleDropdown}
-                                                className="flex items-center gap-x-1 cursor-pointer duration-150 group-hover:text-gray-400 w-full text-left"
+                                                onClick={isMobile ? toggleDropdown : undefined}
+                                                className="flex items-center py-1 font-light gap-x-1 cursor-pointer duration-150 group-hover:text-gray-400 w-full text-left"
+                                                onMouseEnter={() => !isMobile && setDropdownOpen(true)}
+                                                onMouseLeave={() => !isMobile && setDropdownOpen(false)}
                                             >
                                                 {item.title}
                                                 <IoIosArrowDown
@@ -107,8 +117,8 @@ const Navbar = () => {
                                                     className={`transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""}`}
                                                 />
                                             </button>
-                                            {dropdownOpen && (
-                                                <ul className="mt-2 space-y-2">
+                                            {(dropdownOpen || !isMobile) && (
+                                                <ul className={`mt-2 space-y-2 ${isMobile ? '' : 'absolute top-4 -left-10 bg-white shadow-lg px-2 py-4 rounded-md w-max hidden group-hover:block'}`}>
                                                     {item.dropdown.map((subItem, subIdx) => (
                                                         <li key={subIdx} className="pl-4 hover:bg-gray-100">
                                                             <Link href={subItem.path} className="block hover:text-gray-400">

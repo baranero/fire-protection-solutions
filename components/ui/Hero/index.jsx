@@ -7,10 +7,10 @@ const Hero = () => (
                 <h1 className=" text-gray-800 sm:text-4xl font-bold text-2xl sm:leading-tight">
                     Profesjonalne rozwiązania <br/> w zakresie <span className="text-accent">ochrony przeciwpożarowej</span>
                 </h1>
-                <p className="max-w-xl text-lg leading-relaxed ">
+                <p className="max-w-xl text-base leading-relaxed ">
                     Usługi przeciwpożarowe - sporządzanie dokumentacji ppoż. tak, aby Twój obiekt spełniał wymagane przepisy i zapewniał bezpieczeństwo jego użytkownikom.
                 </p>
-                <div className="flex items-center justify-center gap-x-3 font-medium text-sm">
+                <div className="flex items-center sm:justify-start justify-center gap-x-3 font-medium text-sm">
                     <NavLink
                         href="/#kontakt"
                         className="text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 transition-all duration-300"
