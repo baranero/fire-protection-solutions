@@ -30,6 +30,7 @@ const IBP = () => {
                 <p className='pb-10'>&#167;6 Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 7 czerwca 2010 r. w sprawie ochrony przeciwpożarowej budynków, innych obiektów budowlanych i terenów. (Dz. U. z 2023 r., poz. 822).</p>
                 <h3 className='pb-6 text-lg'>Dlaczego warto zlecić opracowanie Instrukcji Bezpieczeństwa Pożarowego mojej osobie?</h3>
                 <p className='pb-10'>
+                    
 <ul className='list-disc pl-8'>
     <li>Indywidualne podejście – Każdy obiekt jest inny, dlatego moja instrukcja zawsze uwzględnia specyficzne zagrożenia i potrzeby Państwa obiektu.</li>
     <li>Doświadczenie i wiedza – jestem ekspertem z wieloletnim doświadczeniem w branży ochrony przeciwpożarowej.</li>
