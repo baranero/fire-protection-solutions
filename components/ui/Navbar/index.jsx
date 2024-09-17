@@ -70,7 +70,7 @@ const Navbar = () => {
                 <div className="w-full sm:items-center sm:flex sm:justify-between">
                     <div className="flex items-center justify-between py-3 md:py-5">
                         <Brand />
-                        <div className="md:hidden">
+                        <div className="md:hidden flex ">
                             <button role="button" aria-label="Open the menu" className="text-gray-500 hover:text-gray-800"
                                 onClick={handleNavMenu}
                             >
