@@ -10,16 +10,16 @@ const Hero = () => (
                 <p className="max-w-xl text-base leading-relaxed ">
                     Usługi przeciwpożarowe - sporządzanie dokumentacji ppoż. tak, aby Twój obiekt spełniał wymagane przepisy i zapewniał bezpieczeństwo jego użytkownikom.
                 </p>
-                <div className="flex items-center sm:justify-start justify-center gap-x-3 font-medium text-sm">
+                <div className="flex items-center sm:justify-start justify-center gap-x-3 font-medium sm:text-sm">
                     <NavLink
                         href="/#kontakt"
-                        className="text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 transition-all duration-300"
+                        className="text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 transition-all duration-300 sm:text-sm text-xs"
                     >
                         Skontaktuj się
                     </NavLink>
                     <NavLink
                         href="#uslugi"
-                        className="text-gray-700 border bg-gray-100 hover:bg-gray-200 transition-all duration-300"
+                        className="text-gray-700 border bg-gray-100 hover:bg-gray-200 transition-all duration-300 sm:text-sm text-xs"
                         scroll={false}
                     >
                         Dowiedz się więcej  
