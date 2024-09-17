@@ -3,7 +3,7 @@ import Exting from "../public/exting.jpg";
 
 const IBP = () => {
   return (
-    <div className="sm:px-28 text-center px-6 pt-10 flex flex-col sm:flex-row justify-between gap-x-20 ">
+    <div className="sm:px-28 sm:text-left text-center px-6 pt-10 flex flex-col sm:flex-row justify-between gap-x-20 ">
       <Image
         src={Exting}
         width={500}
