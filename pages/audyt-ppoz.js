@@ -1,50 +1,64 @@
-import Image from 'next/image'
-import Exting from '../public/exting.jpg'
-
+import Image from "next/image";
+import Exting from "../public/audit.jpg";
 
 const IBP = () => {
+  return (
+    <div className="sm:px-28 sm:text-left text-center px-6 pt-10 flex flex-col sm:flex-row justify-between gap-x-20 ">
+      <Image
+        src={Exting}
+        width={500}
+        className="object-cover sm:w-[30vw] sm:pb-0 pb-10 sm:h-[70vh]"
+        alt="Extinguisher"
+      />
+      <div className="">
+        <h2 className="text-xl pb-6">Audyt przeciwpożarowy</h2>
+        <p className="pb-10 ">
+          Audyt ppoż. to kompleksowa ocena stanu ochrony przeciwpożarowej w budynkach, obiektach lub
+          instalacjach. Celem audytu jest identyfikacja potencjalnych zagrożeń pożarowych oraz ocena
+          zgodności z obowiązującymi przepisami prawnymi i normami bezpieczeństwa pożarowego. Audyt
+          ten jest istotnym elementem zarządzania bezpieczeństwem pożarowym i ma na celu
+          minimalizację ryzyka pożaru oraz poprawę stanu ochrony przeciwpożarowej.
+        </p>
+        <h3 className="pb-6 text-lg">Dlaczego warto przeprowadzić audyt ppoż?</h3>
+        <p className="pb-10">
+          Zgodnie z art. 4 Ustawy o ochronie przeciwpożarowej,
+          właściciele, zarządcy oraz użytkownicy budynków, obiektów budowlanych lub terenów mają
+          obowiązek przestrzegać wymagań przeciwpożarowych, w tym zapewnić odpowiednie wyposażenie w
+          urządzenia przeciwpożarowe i gaśnice, ich konserwację, a także przygotować obiekt do
+          ewakuacji i prowadzenia działań ratowniczych. Ponadto, muszą zapoznać pracowników z
+          przepisami przeciwpożarowymi i ustalić procedury postępowania na wypadek pożaru lub innego
+          zagrożenia, co ma na celu zapewnienie bezpieczeństwa osób oraz ochrony mienia.
+        </p>
 
-    
+        <h3 className="pb-6 text-lg">Podstawa prawna</h3>
+        <p className="pb-10">
+          Ustawa z dnia 24 sierpnia 1991 r. o ochronie przeciwpożarowej (Dz. U. z 2024 r. poz. 275)
+        </p>
+        <h3 className="pb-6 text-lg">
+          Dlaczego warto zlecić opracowanie audytu przeciwpożarowgo mojej osobie?
+        </h3>
+        <p className=""></p>
+        <ul className="list-disc pl-8 pb-10">
+          <li>
+            Indywidualne podejście – Każdy obiekt jest inny, dlatego mój audyt zawsze
+            uwzględnia specyficzne zagrożenia i potrzeby Państwa obiektu.
+          </li>
+          <li>
+            Doświadczenie i wiedza – jestem ekspertem z wieloletnim doświadczeniem w branży ochrony
+            przeciwpożarowej.
+          </li>
+          <li>
+            Zgodność z przepisami – Audyty opracowuję zgodnie z obowiązującymi normami i
+            przepisami, co jest kluczowe dla zgodności z wymaganiami prawnymi.
+          </li>
+          <li>
+            Kompleksowe wsparcie – Oferuję nie tylko opracowanie dokumentacji, ale również doradztwo
+            w zakresie ochrony przeciwpożarowej.
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-    return (
-        <div className='sm:px-28 px-6 pt-10 flex sm:flex-row justify-between gap-x-20 '>
-            <Image src={Exting} width={500} className='object-cover w-[30vw] h-[70vh]' alt="Extinguisher"/>
-            <div className=''>
-                <h2 className='text-xl pb-6'>Instrukcja Bezpieczeństwa Pożarowego</h2>
-                <p className='pb-10 '>Instrukcja Bezpieczeństwa Pożarowego (IBP) to kluczowy dokument określający zasady ochrony przeciwpożarowej w budynkach. Oferuję kompleksowe opracowanie Instrukcji Bezpieczeństwa Pożarowego, dostosowanej do specyfiki Państwa obiektu, zgodnie z najnowszymi przepisami prawa.</p>
-                <h3 className='pb-6 text-lg'>Kiedy Instrukcja Bezpieczeństwa Pożarowego jest wymagana?</h3>
-                <p className='pb-10'>Zgodnie z prawem Właściciele, zarządcy lub użytkownicy obiektów bądź ich części stanowiących odrębne strefy pożarowe, przeznaczonych do wykonywania funkcji użyteczności publicznej, zamieszkania zbiorowego, produkcyjnych, magazynowych oraz inwentarskich, zapewniają i wdrażają instrukcję bezpieczeństwa pożarowego.
-
-
-                </p>
-                <h3 className='pb-6 text-lg'>Kiedy Instrukcja Bezpieczeństwa Pożarowego <u>nie</u> jest wymagana?</h3>
-                <p className='pb-10'>Instrukcja bezpieczeństwa pożarowego nie jest wymagana, gdy:
-                    <ul className='list-disc pl-8'>
-                        <li>kubatura brutto budynku lub jego części stanowiącej odrębną strefę pożarową nie przekracza 1000 m3</li>
-                        <li>kubatura brutto budynku inwentarskiego nie przekracza 1500 m3</li>
-                        <li>powierzchnia strefy pożarowej obiektu innego niż budynek nie przekracza 1000 m2
-</li>
-                    </ul>
-                </p>
-                <h3 className='pb-6 text-lg'>Podstawa prawna</h3>
-                <p className='pb-10'>&#167;6 Rozporządzenia Ministra Spraw Wewnętrznych i Administracji z dnia 7 czerwca 2010 r. w sprawie ochrony przeciwpożarowej budynków, innych obiektów budowlanych i terenów. (Dz. U. z 2023 r., poz. 822).</p>
-                <h3 className='pb-6 text-lg'>Dlaczego warto zlecić opracowanie Instrukcji Bezpieczeństwa Pożarowego mojej osobie?</h3>
-                <p className='pb-10'>
-                    
-<ul className='list-disc pl-8'>
-    <li>Indywidualne podejście – Każdy obiekt jest inny, dlatego moja instrukcja zawsze uwzględnia specyficzne zagrożenia i potrzeby Państwa obiektu.</li>
-    <li>Doświadczenie i wiedza – jestem ekspertem z wieloletnim doświadczeniem w branży ochrony przeciwpożarowej.</li>
-    <li>Zgodność z przepisami – Instrukcje opracowuję zgodnie z obowiązującymi normami i przepisami, co jest kluczowe dla zgodności z wymaganiami prawnymi.</li>
-    <li>Kompleksowe wsparcie – Oferuję nie tylko opracowanie dokumentacji, ale również doradztwo w zakresie ochrony przeciwpożarowej.</li>
-</ul>
-
-
-
- 
-                </p>
-            </div>
-        </div>
-    )
-}
-
-export default IBP
+export default IBP;
