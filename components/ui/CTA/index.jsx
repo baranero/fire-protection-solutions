@@ -6,7 +6,7 @@ import Image from "next/image"
 const CTA = () => {
     return (
         <SectionWrapper id="o-mnie" className="px-6 sm:px-28">
-                        <h2 className="text-center pt-6 pb-28 text-5xl text-accent">O mnie</h2>
+                        <h2 className="text-center pt-6 pb-28 text-5xl ">O <span className="text-accent">mnie</span></h2>
             <div className="custom-screen text-sm">
                 <div className="items-center gap-x-12 lg:flex">
                     <div className="flex-1 sm:hidden lg:block">
